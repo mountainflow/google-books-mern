@@ -4,6 +4,7 @@ import SavedBooks from "./pages/SavedBooks";
 import SearchBooks from "./pages/SearchBooks";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
+import Header from "./components/Header"
 import "./App.css"
 
 
@@ -12,6 +13,7 @@ function App() {
     <Router>
       <div>
         <Nav />
+        <Header />
         <Switch>
           <Route exact path="/" component={SearchBooks} />
           <Route exact path="/saved" component={SavedBooks} />
