@@ -11,7 +11,19 @@ class SearchBooks extends Component {
         return (
             <>
             <Search />
-            <h1>Search</h1>
+            <div className="row" >
+                <div className="col s12 center">
+                    <div className="card">
+                        <div className="card-content">
+                            <div className="row">
+                                <div className="col s12 left">
+                                    Search Results
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             </>
         )
     }

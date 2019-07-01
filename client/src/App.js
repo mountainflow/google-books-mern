@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import 'materialize-css/dist/css/materialize.min.css';
 import SavedBooks from "./pages/SavedBooks";
 import SearchBooks from "./pages/SearchBooks";
 import NoMatch from "./pages/NoMatch";

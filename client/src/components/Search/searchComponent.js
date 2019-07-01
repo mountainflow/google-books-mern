@@ -1,50 +1,43 @@
-import React from "react";
+import React, { Component } from "react";
+import M from "materialize-css";
+import './style.css';
 
-const SearchForm = props => {
-    return (
-        <div className="row" >
-            <div className="col s12 center">
-                <div className="card blue-grey">
-                    <div className="card-content white-text">
-
-                        <div className="row">
-                            <form className="col s12">
-                                <div className="row">
-                                    <div className="input-field col s12">
-                                        <input className="validate white-text"
-                                            id="searchBook"
-                                            type="text"
-                                            value={props.search}
-                                            name="searchBook"
-                                            onChange={props.handleInputChange}
-                                        />
-                                        <label for="searchBook">Enter Book Name</label>
+class SearchForm extends Component {
+    componentDidMount() {
+        // Auto initialize materialize
+        M.AutoInit();
+    }
+    render() {
+        return (
+            <>
+            <div className="row" >
+                <div className="col s12 center">
+                    <div className="card blue-grey">
+                        <div className="card-content">
+                            <div className="row">
+                                <form className="col s12">
+                                    <div className="row">
+                                        <div className="input-field col s12">
+                                            <input className="validate white-text"
+                                                id="searchBook"
+                                                type="text"
+                                                value={this.props.search}
+                                                name="searchBook"
+                                                onChange={this.props.handleInputChange}
+                                            />
+                                            <label for="searchBook" className="white-text">Enter Book Name</label>
+                                        </div>
+                                            <button type="submit" className="btn waves-effect waves-light grey right" onClick={this.props.handleFormSubmit}>Submit</button>
                                     </div>
-                                </div>
-                                <button type="submit" className="btn waves-effect waves-light" onClick={props.handleFormSubmit}>Submit</button>
-                            </form>
-                        </div>
-
-
-                        {/* <form>
-                            <div className="form-group">
-                                <label className="BookSearchLabel white-text"><h3>Search For A Book</h3></label>
-                                <br></br>
-                                <input className="col s12 form-control"
-                                    value={props.search}
-                                    type="text"
-                                    name="searchBook"
-                                    placeholder="Enter Book's Name"
-                                    onChange={props.handleInputChange}
-                                />
+                                </form>
                             </div>
-                            <button type="submit" className="btn waves-effect waves-light" onClick={props.handleFormSubmit}>Submit</button>
-                        </form> */}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div >
-    )
+            </>
+        );
+    }
 }
 
 export default SearchForm
