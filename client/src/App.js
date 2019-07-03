@@ -3,10 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import 'materialize-css/dist/css/materialize.min.css';
 import SavedBooks from "./pages/SavedBooks";
 import SearchBooks from "./pages/SearchBooks";
-import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Header from "./components/Header"
-import "./App.css"
+import NoMatch from "./pages/NoMatch";
 
 
 function App() {
