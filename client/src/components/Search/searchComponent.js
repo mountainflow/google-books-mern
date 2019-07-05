@@ -1,15 +1,7 @@
-import React, { Component } from "react";
-import M from "materialize-css";
-import './style.css';
+import React from "react";
 
-class SearchForm extends Component {
-    componentDidMount() {
-        // Auto initialize materialize
-        M.AutoInit();
-    }
-    render() {
+const SearchForm = props => {
         return (
-            <>
             <div className="row" >
                 <div className="col s12 center">
                     <div className="card blue-grey">
@@ -21,13 +13,13 @@ class SearchForm extends Component {
                                             <input className="validate white-text"
                                                 id="searchBook"
                                                 type="text"
-                                                value={this.props.search}
+                                                value={props.search}
                                                 name="searchBook"
-                                                onChange={this.props.handleInputChange}
+                                                onChange={props.handleInputChange}
                                             />
-                                            <label for="searchBook" className="white-text">Enter Book Name</label>
+                                            <label htmfor="searchBook" className="white-text">Enter Book Name</label>
                                         </div>
-                                            <button type="submit" className="btn waves-effect waves-light grey right" onClick={this.props.handleFormSubmit}>Submit</button>
+                                            <button type="submit" className="btn waves-effect waves-light grey right" onClick={props.handleFormSubmit}>Submit</button>
                                     </div>
                                 </form>
                             </div>
@@ -35,9 +27,7 @@ class SearchForm extends Component {
                     </div>
                 </div>
             </div>
-            </>
         );
     }
-}
 
 export default SearchForm;
